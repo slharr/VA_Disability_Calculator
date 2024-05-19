@@ -52,6 +52,10 @@ int main() {
 
         // Convert input to lowercase for case-insensitive comparison
         transform(name.begin(), name.end(), name.begin(), ::tolower);
+        if (name.empty()) { // Check if the name is empty
+            cout << "Please enter a valid disability description." << endl;
+            continue; // Skip the rest of the loop iteration
+        }
         if (name == "x") {
             break;
         }
